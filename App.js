@@ -1,11 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import Header from "./components/Header/Header";
+import HomePage from "./components/HomePage/HomePage";
 
 export default function App() {
+  const [task, newTask] = useState(["1111", "1111", "1111", "1111"]);
   return (
     <View style={styles.container}>
-      <Text>Fff</Text>
-      <StatusBar style="auto" />
+      <Header />
+      <ScrollView style={styles.content}>
+        <HomePage />
+      </ScrollView>
+      <StatusBar hidden />
     </View>
   );
 }
@@ -13,8 +20,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(20, 20, 20, 1)",
     alignItems: "center",
-    justifyContent: "center",
+  },
+  content: {
+    margin: 0,
+    padding: 0,
+    width: "100%",
+  },
+  text: {
+    color: "#fff",
   },
 });
