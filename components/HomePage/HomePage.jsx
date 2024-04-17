@@ -8,6 +8,10 @@ import {
 import Title from "../UI/Title";
 import Subtitle from "../UI/Subtitle";
 import Btn, { BtnVariant } from "../UI/Button";
+import Properties from "./Blocks/Properties";
+import Feedback from "./Blocks/Feedback";
+import Questions from "./Blocks/Questions";
+import More from "./Blocks/More";
 
 const HomePage = () => {
   let [fontLoaded, fontError] = useFonts({
@@ -29,6 +33,10 @@ const HomePage = () => {
         Learn More
       </Btn>
       <Btn variant={BtnVariant.purple}>Browse Properties</Btn>
+      <Properties />
+      <Feedback />
+      <Questions />
+      <More />
     </View>
   );
 };

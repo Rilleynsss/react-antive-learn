@@ -1,6 +1,6 @@
 import { Urbanist_500Medium } from "@expo-google-fonts/urbanist";
 import { useFonts } from "expo-font";
-import { Button, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 export const BtnVariant = {
   purple: "purple",
