@@ -12,6 +12,8 @@ import Properties from "./Blocks/Properties";
 import Feedback from "./Blocks/Feedback";
 import Questions from "./Blocks/Questions";
 import More from "./Blocks/More";
+import StatisticBlocks from "../StatisticBlocks/StatisticBlock";
+import Opportunity from "../Opportunity/Opportunity";
 
 const HomePage = () => {
   let [fontLoaded, fontError] = useFonts({
@@ -24,7 +26,9 @@ const HomePage = () => {
   return (
     <View style={style.Home}>
       <Image style={style.img} source={building} />
-      <Title>Discover Your Dream Property with Estatein</Title>
+      <Title style={{ marginTop: 56 }}>
+        Discover Your Dream Property with Estatein
+      </Title>
       <Subtitle style={{ marginBottom: 40 }}>
         Your journey to finding the perfect property begins here. Explore our
         listings to find the home that matches your dreams.
@@ -32,7 +36,10 @@ const HomePage = () => {
       <Btn variant={BtnVariant.transparent} style={{ marginBottom: 16 }}>
         Learn More
       </Btn>
+
       <Btn variant={BtnVariant.purple}>Browse Properties</Btn>
+      <StatisticBlocks style={{ marginVertical: 40 }} />
+      <Opportunity />
       <Properties />
       <Feedback />
       <Questions />
